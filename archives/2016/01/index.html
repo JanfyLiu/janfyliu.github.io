@@ -223,6 +223,73 @@
             <div class="postShorten-header">
                 <h1 class="postShorten-title" itemprop="headline">
                     
+                        <a class="link-unstyled" href="/2016/01/18/dobe-development-stack/">
+                            基于docker的开发环境
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" content="Mon Jan 18 2016 02:04:33 GMT+0800">
+	
+		    Jan 18, 2016
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Skills/">Skills</a>
+
+
+    
+</div>
+            </div>
+            
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>环境部署是所有团队都必须面对的问题，随着系统越来越大，依赖的服务也越来越多，项目引入新的服务时所有人的环境需要重新配置，本地搭建一套环境成本越来越高，服务的版本差异及OS的差异都可能导致线上环境BUG，新同事入职每个人都需要花时间去配置各自的开发环境，一个团队可能有多种语言的开发，环境各不一样，如果一个标准化的开发环境，能很好的版本管理，什么项目都能运行，对团队知识共享是多么好的事。</p>
+<p>之前我是用<a href="https://www.vagrantup.com/" target="_blank" rel="external">Vagrant</a>配置开发环境，可是虚拟机镜像没有版本管理的概念，当多人维护一个镜像时，很容易出现配置遗漏或者冲突，一个很大的镜像传输起来也不方便。</p>
+<p>Docker的出现让我们遇到的问题得到了很好的解决。如今docker的发展如火如荼，虽然个人对于Docker大规模应用到生产环境还持谨慎态度，但如果仅仅考虑测试及开发，私以为Docker的容器化理念已经是能真正解决环境部署问题的银弹了。</p>
+<p><a href="https://github.com/JanfyLiu/dobe" target="_blank" rel="external">Dobe</a>是我用docker集成化的一个开发环境，暂时只有PHP 开发相关的配置：</p>
+<ul>
+<li><a href="http://nginx.org/" target="_blank" rel="external">Nginx</a></li>
+<li><a href="http://php-fpm.org/" target="_blank" rel="external">PHP-FPM</a></li>
+<li><a href="http://www.mysql.com/" target="_blank" rel="external">MySQL</a></li>
+<li><a href="http://www.mongodb.org/" target="_blank" rel="external">MongoDB</a></li>
+<li><a href="http://memcached.org/" target="_blank" rel="external">Memcached</a></li>
+<li><a href="http://redis.io/" target="_blank" rel="external">Redis</a></li>
+<li><a href="https://nodejs.org/" target="_blank" rel="external">Node</a></li>
+<li><a href="http://www.elasticsearch.org/" target="_blank" rel="external">Elasticsearch</a>   </li>
+</ul>
+<p>等有时间继续完善。。。</p>
+<h3 id="u8FD0_u884CDobe"><a href="#u8FD0_u884CDobe" class="headerlink" title="运行Dobe"></a>运行Dobe</h3><ul>
+<li>安装<a href="https://www.docker.com/docker-toolbox" target="_blank" rel="external">Docker ToolBox</a></li>
+<li>配置<a href="https://www.daocloud.io/" target="_blank" rel="external">daocloud</a>加速器，需要注册daocloud账号</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker-machine start default&#10;docker-machine ssh default&#10;curl -sSL https://get.daocloud.io/daomonit/install.sh | sh -s 433eaf4bd42e6fd80c3de4a1f9758b6b4d7afb1f&#10;dao pull &#60;image&#62;</span><br></pre></td></tr></table></figure>
+
+                    
+                        
+
+                    
+                    
+                        <p>
+                            <a href="/2016/01/18/dobe-development-stack/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
                         <a class="link-unstyled" href="/2016/01/17/use-GitHub-Pages+Hexo/">
                             使用 Github Pages+Hexo 创建博客
                         </a>
