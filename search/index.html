@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Janfy&#39;s blog">
-    <title>Janfy&#39;s blog</title>
+    <title>search - Janfy&#39;s blog</title>
     <meta name="author" content="Janfy Liu">
     
     
@@ -15,12 +15,13 @@
     
     <meta name="description">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="Janfy's blog">
-<meta property="og:url" content="http://janfyliu.github.io/index.html">
+<meta property="og:title" content="search">
+<meta property="og:url" content="http://janfyliu.github.io/search/index.html">
 <meta property="og:site_name" content="Janfy's blog">
 <meta property="og:description">
+<meta property="og:updated_time" content="2016-01-17T11:23:24.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Janfy's blog">
+<meta name="twitter:title" content="search">
 <meta name="twitter:description">
 <meta name="twitter:creator" content="@janfyliu">
 <meta property="fb:app_id" content="100007382343901">
@@ -213,77 +214,106 @@
                         hasCoverMetaIn
                         ">
                 
-
-<section class="postShorten-group main-content-wrap">
+<article class="post" itemscope itemType="http://schema.org/BlogPosting">
     
     
-    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-        <div class="postShorten-wrap">
-            <div class="postShorten-header">
-                <h1 class="postShorten-title" itemprop="headline">
-                    
-                        <a class="link-unstyled" href="/2016/01/17/use-GitHub-Pages+Hexo/">
-                            使用 Github Pages+Hexo 创建博客
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time itemprop="datePublished" content="Sun Jan 17 2016 14:55:22 GMT+0800">
+        <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title" itemprop="headline">
+            search
+        </h1>
+    
+    <div class="post-meta">
+    <time itemprop="datePublished" content="Sun Jan 17 2016 19:23:24 GMT+0800">
 	
 		    Jan 17, 2016
     	
     </time>
     
-        <span>in </span>
-        
-    <a class="category-link" href="/categories/Skills/">Skills</a>
-
-
-    
 </div>
-            </div>
+</div>
+    
+    <div class="post-content markdown" itemprop="articleBody">
+        <div class="main-content-wrap">
             
             
-                <div class="postShorten-content" itemprop="articleBody">
-                    <p>个人博客好像是圈子里的标配，你有他有我没有怎么行呢？<br>用独立博客？累觉不爱！<br>GitHub早就为我们操碎心了，GitHub Pages提供300M 的免费空间，有便宜不占王八蛋。<br>下面是我用<a href="https://pages.github.com/" target="_blank" rel="external">GitHub-Pages</a>+<a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>搭建博客的步骤</p>
-<h2 id="u51C6_u5907"><a href="#u51C6_u5907" class="headerlink" title="准备"></a>准备</h2><ul>
-<li>username.github.io 仓库</li>
-<li><a href="https://nodejs.org/en/" target="_blank" rel="external">Nodejs</a>(With npm,grunt,bower)</li>
-</ul>
-<h2 id="u5F00_u59CB"><a href="#u5F00_u59CB" class="headerlink" title="开始"></a>开始</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd &#60;hexo&#62;&#10;npm install hexo-cli -g&#10;hexo init&#10;npm install</span><br></pre></td></tr></table></figure>
-<h2 id="u4E3B_u9898"><a href="#u4E3B_u9898" class="headerlink" title="主题"></a>主题</h2><p><a href="https://hexo.io/themes/" target="_blank" rel="external">Themes</a> 下有很多好看的主题，<a href="https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak" target="_blank" rel="external">tranquilpeak</a> 符合我得口味</p>
-<p>Run<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd ./themes&#10;git clone https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak.git tranquilpeak&#10;cd tranquilpeak&#10;npm install&#10;bower install&#10;grunt buildProd</span><br></pre></td></tr></table></figure></p>
-<p>edit <code>_config.yml</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: tranquilpeak</span><br></pre></td></tr></table></figure></p>
-<p>看看 <code>theme/tranquilpeak/docs</code>，下面的使用和开发文档，发现这个主题功能很强大，有事情干了。<br>编辑 <code>theme/tranquilpeak/_config.yml</code>，评论、统计、搜索想要的东西都配上<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd &#60;hexo&#62;&#10;hexo new page &#34;all-categories&#34;&#10;hexo new page &#34;all-tags&#34;&#10;hexo new page &#34;all-archives&#34;&#10;hexo new page &#34;search&#34;</span><br></pre></td></tr></table></figure></p>
-<p>Run <code>hexo server</code>, 打开 <code>http://0.0.0.0:4000/</code> 看疗效</p>
-<img src="/2016/01/17/use-GitHub-Pages+Hexo/67D34535-3BDA-48E2-8AEF-770A73511598.png" alt="67D34535-3BDA-48E2-8AEF-770A73511598.png" title="">
+                
 
-                    
-                        
-
-                    
-                    
-                        <p>
-                            <a href="/2016/01/17/use-GitHub-Pages+Hexo/#post-footer" class="postShorten-excerpt_link link">
-                                Comment and share
-                            </a>
-                        </p>
-                    
-                </div>
             
         </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
         
-    </article>
-    
-    <div class="pagination-bar">
-    <ul class="pagination">
+        <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://janfyliu.github.io/search/index.html">
+                <i class="fa fa-google-plus"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://janfyliu.github.io/search/index.html">
+                <i class="fa fa-facebook-official"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://janfyliu.github.io/search/index.html">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
         
+            <li class="post-action">
+                <a class="post-action-btn btn btn--default" href="#disqus_thread">
+                    <i class="fa fa-comment-o"></i>
+                </a>
+            </li>
         
-        <li class="pagination-number">page 1 of 1</li>
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
     </ul>
 </div>
 
-</section>
+
+        
+            
+                <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+            
+        
+    </div>
+</article>
+
 
 
                 <footer id="footer" class="main-content-wrap">
@@ -342,6 +372,25 @@
 <script src="/assets/js/jquery.fancybox-thumbs.js" type="text/javascript"></script>
 <script src="/assets/js/tranquilpeak.js" type="text/javascript"></script>
 <!--SCRIPTS END-->
+
+    
+        <script>
+             var disqus_config = function () {
+                 this.page.url = 'http://janfyliu.github.io/search/index.html';
+                 
+                    this.page.identifier = 'search/index.html';
+                                  
+             };
+            (function() {
+                var d = document, s = d.createElement('script');
+                var disqus_shortname = 'janfyliugithubio';
+                s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+    
 
 
     <script type="text/javascript">
